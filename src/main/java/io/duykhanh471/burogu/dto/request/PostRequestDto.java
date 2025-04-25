@@ -1,4 +1,6 @@
-package io.duykhanh471.burogu.dto;
+package io.duykhanh471.burogu.dto.request;
+
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.AllArgsConstructor;
@@ -11,9 +13,9 @@ import lombok.Builder;
 @NoArgsConstructor
 @Builder
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class CommentDto {
+public class PostRequestDto {
     private int id;
-    private String username;
-    private String password;
-    private String role;
+    private String title;
+    private String content;
+    private List<String> comments;
 }
